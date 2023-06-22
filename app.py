@@ -22,7 +22,7 @@ matplotlib.use('TkAgg')
 load_dotenv()
 
 st.title("\U000026A1 BitBoosters \U000026A1")
-st.markdown("<p style='color: white; font-size: 15px;'>Carga tus archivos Excel o CSV, realiza consultas en lenguaje natural, crea gráficos de manera intuitiva y descubre los insights que tus datos tienen para ofrecerte. Tu análisis de datos simplificado.</p>", unsafe_allow_html=True)
+st.markdown("<p style='color: white; font-size: 15px;'>Carga tus archivos Excel o CSV, realiza consultas en lenguaje natural, crea gráficos de manera intuitiva y descubre los insights que tus datos tienen para ofrecerte.</p>", unsafe_allow_html=True)o
 
 uploaded_file = st.file_uploader("Carga tu archivo", type=['csv', 'xlsx'])
 

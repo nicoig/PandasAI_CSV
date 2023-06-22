@@ -1034,3 +1034,38 @@ plt.close('all')
 ```
 2023-06-22 09:33:38 [INFO] Answer: None
 2023-06-22 09:33:38 [INFO] Executed in: 7.615477800369263s
+2023-06-22 09:49:28 [INFO] Running PandasAI with openai LLM...
+2023-06-22 09:49:28 [INFO] Prompt ID: 3b9bc9d2-9162-4433-8969-cb3acc4a238d
+2023-06-22 09:49:32 [INFO] 
+                        Code generated:
+                        ```
+                        import pandas as pd
+import matplotlib.pyplot as plt
+
+# Load the dataframe
+df = pd.read_csv('data.csv')
+
+# Print the metadata of the dataframe
+print(df.info())
+
+# Create a bar plot of the count of passengers by sex
+df.groupby('Sex')['PassengerId'].count().plot(kind='bar')
+plt.title('Passengers by Sex')
+plt.xlabel('Sex')
+plt.ylabel('Count')
+plt.show()
+                        ```
+                    
+2023-06-22 09:49:32 [INFO] 
+Code running:
+```
+print(df.info())
+df.groupby('Sex')['PassengerId'].count().plot(kind='bar')
+plt.title('Passengers by Sex')
+plt.xlabel('Sex')
+plt.ylabel('Count')
+plt.show()
+plt.close('all')
+```
+2023-06-22 09:49:36 [INFO] Answer: None
+2023-06-22 09:49:36 [INFO] Executed in: 8.056907176971436s
