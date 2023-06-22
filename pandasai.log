@@ -1548,3 +1548,46 @@ df['Survived'].sum()
 ```
 2023-06-22 19:48:51 [INFO] Answer: 342
 2023-06-22 19:48:51 [INFO] Executed in: 0.05599808692932129s
+2023-06-22 19:49:04 [INFO] Running PandasAI with openai LLM...
+2023-06-22 19:49:04 [INFO] Prompt ID: b2a102a9-9c0a-49ee-8d46-5848b073698f
+2023-06-22 19:49:11 [INFO] 
+                        Code generated:
+                        ```
+                        # Import pandas library
+import pandas as pd
+
+# Load the dataframe
+df = pd.read_csv('data.csv')
+
+# Count the number of survivors and non-survivors
+survived = df['Survived'].value_counts()[1]
+not_survived = df['Survived'].value_counts()[0]
+
+# Calculate the percentage of survivors and non-survivors
+survived_percent = (survived / len(df)) * 100
+not_survived_percent = (not_survived / len(df)) * 100
+
+# Print the results
+print("Number of survivors:", survived)
+print("Number of non-survivors:", not_survived)
+print("Percentage of survivors:", survived_percent)
+print("Percentage of non-survivors:", not_survived_percent)
+                        ```
+                    
+2023-06-22 19:49:11 [INFO] 
+Code running:
+```
+survived = df['Survived'].value_counts()[1]
+not_survived = df['Survived'].value_counts()[0]
+survived_percent = survived / len(df) * 100
+not_survived_percent = not_survived / len(df) * 100
+print('Number of survivors:', survived)
+print('Number of non-survivors:', not_survived)
+print('Percentage of survivors:', survived_percent)
+print('Percentage of non-survivors:', not_survived_percent)
+```
+2023-06-22 19:49:11 [INFO] Answer: Number of survivors: 342
+Number of non-survivors: 549
+Percentage of survivors: 38.38383838383838
+Percentage of non-survivors: 61.61616161616161
+2023-06-22 19:49:11 [INFO] Executed in: 7.718010663986206s
