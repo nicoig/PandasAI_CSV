@@ -8,6 +8,7 @@
 # pip freeze | findstr matplotlib >> requirements.txt
 
 
+
 import streamlit as st 
 import pandas as pd
 from pandasai import PandasAI
@@ -18,56 +19,41 @@ import matplotlib
 
 matplotlib.use('TkAgg')
 
-# Cargar variables de entorno desde el archivo .env
 load_dotenv()
 
-# El emoji de rayo en Unicode es \U000026A1
 st.title("\U000026A1 BitBoosters \U000026A1")
-st.subheader("Crea Gráficos al instante")
+st.markdown("<p style='color: white; font-size: 15px;'>Carga tus archivos Excel o CSV, realiza consultas en lenguaje natural, crea gráficos de manera intuitiva y descubre los insights que tus datos tienen para ofrecerte. Tu análisis de datos simplificado.</p>", unsafe_allow_html=True)
 
-uploaded_file = st.file_uploader("Carga tu archivo", type=['csv'])
+uploaded_file = st.file_uploader("Carga tu archivo", type=['csv', 'xlsx'])
 
 if uploaded_file is not None:
-    try:
+    df = None
+    if uploaded_file.type == "application/vnd.openxmlformats-officedocument.spreadsheetml.sheet":
+        df = pd.read_excel(uploaded_file)
+    elif uploaded_file.type == "text/csv":
         df = pd.read_csv(uploaded_file, encoding='utf-8', delimiter=',')
+    else:
+        st.error("El tipo de archivo no es compatible. Por favor, carga un archivo CSV o Excel.")
+
+    if df is not None:
         st.write(df.head(4))
 
-        # Cargar la clave de API desde la variable de entorno
         api = os.getenv("OPENAI_API_KEY")
-
-        # Crear un LLM instanciando el objeto OpenAI y pasando el token de la API
         llm = OpenAI(api_token=api)
-
-        # Crear objeto PandasAI, pasando el LLM y ajustando la opción conversacional en Falso
         pandas_ai = PandasAI(llm, conversational=False)
 
-        # Input text for the user's prompt
         prompt = st.text_area("Ingresa tu solicitud:")
-
-        # Generar salida usando el agente definido en la solicitud
         if st.button("Generar"):
             if prompt:
-                # Llamar a pandas_ai.run(), pasando dataframe y prompt
                 with st.spinner("Generando respuesta..."):
                     result = pandas_ai.run(df, prompt)
-
-                    # Comprueba el tipo de objeto devuelto
                     if isinstance(result, pd.DataFrame):
-                        # Si es un DataFrame, escríbelo en Streamlit
                         st.write(result)
                     else:
-                        # Para otros tipos de salida, simplemente escribe el resultado en Streamlit
                         st.write(result)
             else:
                 st.warning("Por favor, ingresa una solicitud.")
 
-                
-    except pd.errors.EmptyDataError:
-        st.error("El archivo CSV está vacío. Por favor, carga un archivo CSV válido.")
-    except pd.errors.ParserError:
-        st.error("Ocurrió un error al analizar el archivo CSV. Verifica que el archivo esté en el formato correcto.")
-    except Exception as e:
-        st.error(f"Ocurrió un error desconocido al leer el archivo: {e}")
 
 
 # Actualizar Repo de Github

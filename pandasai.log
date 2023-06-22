@@ -653,3 +653,384 @@ print('There are', num_females, 'women in the dataframe.')
 ```
 2023-06-22 00:54:17 [INFO] Answer: There are 314 women in the dataframe.
 2023-06-22 00:54:17 [INFO] Executed in: 2.8870482444763184s
+2023-06-22 00:54:30 [INFO] Running PandasAI with openai LLM...
+2023-06-22 00:54:30 [INFO] Prompt ID: 27b23eb7-9638-4fde-b4ec-caea8043d68a
+2023-06-22 00:54:37 [INFO] 
+                        Code generated:
+                        ```
+                        import pandas as pd
+import matplotlib.pyplot as plt
+
+# read the csv file into a pandas dataframe
+df = pd.read_csv('file.csv')
+
+# display the first 5 rows of the dataframe
+print(df.head())
+
+# create a pie chart for the 'Sex' variable
+sex_counts = df['Sex'].value_counts()
+plt.pie(sex_counts, labels=sex_counts.index, autopct='%1.1f%%')
+plt.title('Sex Distribution')
+plt.show()
+                        ```
+                    
+2023-06-22 00:54:37 [INFO] 
+Code running:
+```
+print(df.head())
+sex_counts = df['Sex'].value_counts()
+plt.pie(sex_counts, labels=sex_counts.index, autopct='%1.1f%%')
+plt.title('Sex Distribution')
+plt.show()
+plt.close('all')
+```
+2023-06-22 00:54:46 [INFO] Answer: None
+2023-06-22 00:54:46 [INFO] Executed in: 15.470338344573975s
+2023-06-22 08:47:59 [INFO] Running PandasAI with openai LLM...
+2023-06-22 08:47:59 [INFO] Prompt ID: ee29c484-b93d-4c9a-87d3-2ce57b2475c3
+2023-06-22 08:47:59 [INFO] Using cached response
+2023-06-22 08:47:59 [INFO] 
+Code running:
+```
+female_df = df[df['Sex'] == 'female']
+num_females = len(female_df)
+print('Number of females:', num_females)
+```
+2023-06-22 08:47:59 [INFO] Answer: Number of females: 314
+2023-06-22 08:47:59 [INFO] Executed in: 0.015990257263183594s
+2023-06-22 08:54:04 [INFO] Running PandasAI with openai LLM...
+2023-06-22 08:54:04 [INFO] Prompt ID: 2890fc08-ffb1-4c47-89f6-e77240a90513
+2023-06-22 08:54:09 [INFO] 
+                        Code generated:
+                        ```
+                        import pandas as pd
+import matplotlib.pyplot as plt
+
+# read the dataframe
+df = pd.read_csv('data.csv')
+
+# create a pie chart of the 'Sex' column
+sex_counts = df['Sex'].value_counts()
+plt.pie(sex_counts, labels=sex_counts.index, autopct='%1.1f%%')
+plt.title('Sex Distribution')
+plt.show()
+                        ```
+                    
+2023-06-22 08:54:09 [INFO] 
+Code running:
+```
+sex_counts = df['Sex'].value_counts()
+plt.pie(sex_counts, labels=sex_counts.index, autopct='%1.1f%%')
+plt.title('Sex Distribution')
+plt.show()
+plt.close('all')
+```
+2023-06-22 08:54:17 [INFO] Answer: None
+2023-06-22 08:54:17 [INFO] Executed in: 13.126976013183594s
+2023-06-22 08:55:07 [INFO] Running PandasAI with openai LLM...
+2023-06-22 08:55:07 [INFO] Prompt ID: f0096d60-77c6-4aec-8a67-06405228c98d
+2023-06-22 08:55:14 [INFO] 
+                        Code generated:
+                        ```
+                        import pandas as pd
+import matplotlib.pyplot as plt
+
+# Load the dataframe
+df = pd.read_csv('data.csv')
+
+# Group by cabin and survival status
+cabin_survival = df.groupby(['Cabin', 'Survived']).size().unstack()
+
+# Plot the bar chart
+cabin_survival.plot(kind='bar', stacked=True)
+plt.title('Survival by Cabin')
+plt.xlabel('Cabin')
+plt.ylabel('Count')
+plt.show()
+                        ```
+                    
+2023-06-22 08:55:14 [INFO] 
+Code running:
+```
+cabin_survival = df.groupby(['Cabin', 'Survived']).size().unstack()
+cabin_survival.plot(kind='bar', stacked=True)
+plt.title('Survival by Cabin')
+plt.xlabel('Cabin')
+plt.ylabel('Count')
+plt.show()
+plt.close('all')
+```
+2023-06-22 08:55:23 [INFO] Answer: None
+2023-06-22 08:55:23 [INFO] Executed in: 16.6032395362854s
+2023-06-22 08:55:46 [INFO] Running PandasAI with openai LLM...
+2023-06-22 08:55:46 [INFO] Prompt ID: 3e4cd286-eb7f-4f65-8037-8f00f33ecc2a
+2023-06-22 08:55:53 [INFO] 
+                        Code generated:
+                        ```
+                        import matplotlib.pyplot as plt
+
+# Count the number of survivors and non-survivors
+survived_count = df['Survived'].value_counts()[1]
+not_survived_count = df['Survived'].value_counts()[0]
+
+# Create a pie chart
+labels = ['Survived', 'Not Survived']
+sizes = [survived_count, not_survived_count]
+colors = ['green', 'red']
+plt.pie(sizes, labels=labels, colors=colors, autopct='%1.1f%%', startangle=90)
+plt.axis('equal')
+plt.title('Survival Rate')
+plt.show()
+                        ```
+                    
+2023-06-22 08:55:53 [INFO] 
+Code running:
+```
+survived_count = df['Survived'].value_counts()[1]
+not_survived_count = df['Survived'].value_counts()[0]
+labels = ['Survived', 'Not Survived']
+sizes = [survived_count, not_survived_count]
+colors = ['green', 'red']
+plt.pie(sizes, labels=labels, colors=colors, autopct='%1.1f%%', startangle=90)
+plt.axis('equal')
+plt.title('Survival Rate')
+plt.show()
+plt.close('all')
+```
+2023-06-22 08:56:04 [INFO] Answer: None
+2023-06-22 08:56:04 [INFO] Executed in: 17.614548206329346s
+2023-06-22 08:56:27 [INFO] Running PandasAI with openai LLM...
+2023-06-22 08:56:27 [INFO] Prompt ID: 9374e31c-cc15-41cc-9c6b-36363ee2d2d4
+2023-06-22 08:56:33 [INFO] 
+                        Code generated:
+                        ```
+                        import pandas as pd
+import matplotlib.pyplot as plt
+
+# Load the dataframe
+df = pd.read_csv('data.csv')
+
+# Group by Cabin and Survived columns and count the number of occurrences
+grouped = df.groupby(['Cabin', 'Survived']).size().unstack()
+
+# Plot a stacked bar chart for each Cabin
+for cabin in grouped.index:
+    plt.figure()
+    plt.title(f'Survival rate for Cabin {cabin}')
+    plt.pie(grouped.loc[cabin], labels=['Not Survived', 'Survived'], autopct='%1.1f%%')
+    plt.show()
+                        ```
+                    
+2023-06-22 08:56:33 [INFO] 
+Code running:
+```
+grouped = df.groupby(['Cabin', 'Survived']).size().unstack()
+for cabin in grouped.index:
+    plt.figure()
+    plt.title(f'Survival rate for Cabin {cabin}')
+    plt.pie(grouped.loc[cabin], labels=['Not Survived', 'Survived'],
+        autopct='%1.1f%%')
+    plt.show()
+plt.close('all')
+```
+2023-06-22 08:56:55 [INFO] Answer: None
+2023-06-22 08:56:55 [INFO] Executed in: 28.36859655380249s
+2023-06-22 08:57:20 [INFO] Running PandasAI with openai LLM...
+2023-06-22 08:57:20 [INFO] Prompt ID: 1caa07e4-6954-4b06-ad1d-25253950df93
+2023-06-22 08:57:26 [INFO] 
+                        Code generated:
+                        ```
+                        import pandas as pd
+import matplotlib.pyplot as plt
+
+# Load the dataframe
+df = pd.read_csv('data.csv')
+
+# Group by Cabin and Survived columns
+grouped = df.groupby(['Cabin', 'Survived']).size().unstack()
+
+# Plot a pie chart for each Cabin
+for cabin in grouped.index:
+    data = grouped.loc[cabin]
+    plt.pie(data, labels=['Not Survived', 'Survived'], autopct='%1.1f%%')
+    plt.title(f'Survival Rate for Cabin {cabin}')
+    plt.show()
+                        ```
+                    
+2023-06-22 08:57:26 [INFO] 
+Code running:
+```
+grouped = df.groupby(['Cabin', 'Survived']).size().unstack()
+for cabin in grouped.index:
+    data = grouped.loc[cabin]
+    plt.pie(data, labels=['Not Survived', 'Survived'], autopct='%1.1f%%')
+    plt.title(f'Survival Rate for Cabin {cabin}')
+    plt.show()
+plt.close('all')
+```
+2023-06-22 08:57:42 [INFO] Answer: None
+2023-06-22 08:57:42 [INFO] Executed in: 21.919941663742065s
+2023-06-22 08:58:52 [INFO] Running PandasAI with openai LLM...
+2023-06-22 08:58:52 [INFO] Prompt ID: 11f046fb-f868-45c8-93e7-ebcab73b2cee
+2023-06-22 08:58:52 [INFO] Using cached response
+2023-06-22 08:58:52 [INFO] 
+Code running:
+```
+grouped = df.groupby(['Cabin', 'Survived']).size().unstack()
+for cabin in grouped.index:
+    data = grouped.loc[cabin]
+    plt.pie(data, labels=['Not Survived', 'Survived'], autopct='%1.1f%%')
+    plt.title(f'Survival Rate for Cabin {cabin}')
+    plt.show()
+plt.close('all')
+```
+2023-06-22 08:59:11 [INFO] Answer: None
+2023-06-22 08:59:11 [INFO] Executed in: 18.97483992576599s
+2023-06-22 09:30:03 [INFO] Running PandasAI with openai LLM...
+2023-06-22 09:30:03 [INFO] Prompt ID: 0aa016f0-1676-4178-ae71-2ead8828b15c
+2023-06-22 09:30:03 [INFO] Using cached response
+2023-06-22 09:30:03 [INFO] 
+Code running:
+```
+female_df = df[df['Sex'] == 'female']
+num_females = len(female_df)
+print('Number of females:', num_females)
+```
+2023-06-22 09:30:03 [INFO] Answer: Number of females: 314
+2023-06-22 09:30:03 [INFO] Executed in: 0.008005857467651367s
+2023-06-22 09:30:18 [INFO] Running PandasAI with openai LLM...
+2023-06-22 09:30:18 [INFO] Prompt ID: 5f55a73c-992b-4884-a2c5-3d711735a6f0
+2023-06-22 09:30:18 [INFO] Using cached response
+2023-06-22 09:30:18 [INFO] 
+Code running:
+```
+sex_counts = df['Sex'].value_counts()
+plt.pie(sex_counts, labels=sex_counts.index, autopct='%1.1f%%')
+plt.title('Sex Distribution')
+plt.show()
+plt.close('all')
+```
+2023-06-22 09:30:19 [INFO] Answer: None
+2023-06-22 09:30:19 [INFO] Executed in: 0.7460620403289795s
+2023-06-22 09:30:39 [INFO] Running PandasAI with openai LLM...
+2023-06-22 09:30:39 [INFO] Prompt ID: e30b6c99-2e61-4952-8ba5-1c87bd7be7cd
+2023-06-22 09:30:42 [INFO] 
+                        Code generated:
+                        ```
+                        import pandas as pd
+import matplotlib.pyplot as plt
+
+# read the csv file into a pandas dataframe
+df = pd.read_csv('filename.csv')
+
+# describe the dataframe
+df.info()
+
+# create a boxplot of Sex
+df.boxplot(column='Sex')
+
+plt.show()
+                        ```
+                    
+2023-06-22 09:30:42 [INFO] 
+Code running:
+```
+df.info()
+df.boxplot(column='Sex')
+plt.show()
+plt.close('all')
+```
+2023-06-22 09:30:54 [INFO] Answer: None
+2023-06-22 09:30:54 [INFO] Executed in: 14.881006717681885s
+2023-06-22 09:31:27 [INFO] Running PandasAI with openai LLM...
+2023-06-22 09:31:27 [INFO] Prompt ID: 01d960bf-a427-43f9-a7ab-8c1613f1ee15
+2023-06-22 09:31:27 [INFO] Using cached response
+2023-06-22 09:31:27 [INFO] 
+Code running:
+```
+male_df = df[df['Sex'] == 'male']
+num_male = len(male_df)
+print('Number of males:', num_male)
+```
+2023-06-22 09:31:27 [INFO] Answer: Number of males: 577
+2023-06-22 09:31:27 [INFO] Executed in: 0.007998943328857422s
+2023-06-22 09:31:38 [INFO] Running PandasAI with openai LLM...
+2023-06-22 09:31:38 [INFO] Prompt ID: e7c119fe-7fa8-4e52-b863-05209f3df009
+2023-06-22 09:31:43 [INFO] 
+                        Code generated:
+                        ```
+                        # First, we filter the 'Survived' column to only include the value 1 (which means the passenger survived)
+survived_passengers = df[df['Survived'] == 1]
+
+# Then, we count the number of rows in the filtered dataframe
+num_survived = len(survived_passengers)
+
+print("Number of passengers who survived:", num_survived)
+                        ```
+                    
+2023-06-22 09:31:43 [INFO] 
+Code running:
+```
+survived_passengers = df[df['Survived'] == 1]
+num_survived = len(survived_passengers)
+print('Number of passengers who survived:', num_survived)
+```
+2023-06-22 09:31:43 [INFO] Answer: Number of passengers who survived: 342
+2023-06-22 09:31:43 [INFO] Executed in: 4.488089084625244s
+2023-06-22 09:32:02 [INFO] Running PandasAI with openai LLM...
+2023-06-22 09:32:02 [INFO] Prompt ID: a257b935-b394-4f1f-8586-6c130352b873
+2023-06-22 09:32:07 [INFO] 
+                        Code generated:
+                        ```
+                        # First, we filter the dataframe to only include rows where 'Survived' column is equal to 1
+survived_df = df[df['Survived'] == 1]
+
+# Then, we count the number of rows in the filtered dataframe
+num_survived = survived_df.shape[0]
+
+# Finally, we print the result
+print("Number of passengers who survived: ", num_survived)
+                        ```
+                    
+2023-06-22 09:32:07 [INFO] 
+Code running:
+```
+survived_df = df[df['Survived'] == 1]
+num_survived = survived_df.shape[0]
+print('Number of passengers who survived: ', num_survived)
+```
+2023-06-22 09:32:07 [INFO] Answer: Number of passengers who survived:  342
+2023-06-22 09:32:07 [INFO] Executed in: 5.387728214263916s
+2023-06-22 09:33:31 [INFO] Running PandasAI with openai LLM...
+2023-06-22 09:33:31 [INFO] Prompt ID: 252d40e9-8bdc-40e0-9cc2-dafbc840197f
+2023-06-22 09:33:35 [INFO] 
+                        Code generated:
+                        ```
+                        import pandas as pd
+import matplotlib.pyplot as plt
+
+# Load the dataframe
+df = pd.read_csv('data.csv')
+
+# Describe the dataframe
+print(df.info())
+
+# Create a pie chart for sex
+sex_counts = df['Sex'].value_counts()
+plt.pie(sex_counts, labels=sex_counts.index, autopct='%1.1f%%')
+plt.title('Passenger Sex')
+plt.show()
+                        ```
+                    
+2023-06-22 09:33:36 [INFO] 
+Code running:
+```
+print(df.info())
+sex_counts = df['Sex'].value_counts()
+plt.pie(sex_counts, labels=sex_counts.index, autopct='%1.1f%%')
+plt.title('Passenger Sex')
+plt.show()
+plt.close('all')
+```
+2023-06-22 09:33:38 [INFO] Answer: None
+2023-06-22 09:33:38 [INFO] Executed in: 7.615477800369263s
