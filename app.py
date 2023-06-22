@@ -63,3 +63,8 @@ if uploaded_file is not None:
         st.error("Ocurrió un error al analizar el archivo CSV. Verifica que el archivo esté en el formato correcto.")
     except Exception as e:
         st.error(f"Ocurrió un error desconocido al leer el archivo: {e}")
+
+
+# Actualizar Repo de Github
+#git push origin master
+

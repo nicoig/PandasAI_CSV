@@ -1,0 +1,7 @@
+services:
+- type: web
+  name: BitBoosters
+  env: python
+  pythonVersion: 3.8
+  buildCommand: pip install --upgrade pip && pip install -r requirements.txt
+  startCommand: comando-para-iniciar-tu-aplicacion
