@@ -2,6 +2,6 @@ services:
 - type: web
   name: BitBoosters
   env: python
-  pythonVersion: 3.8
+  pythonVersion: 3.9
   buildCommand: pip install --upgrade pip && pip install -r requirements.txt
   startCommand: streamlit run app.py
