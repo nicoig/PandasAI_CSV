@@ -1069,3 +1069,15 @@ plt.close('all')
 ```
 2023-06-22 09:49:36 [INFO] Answer: None
 2023-06-22 09:49:36 [INFO] Executed in: 8.056907176971436s
+2023-06-22 09:59:04 [INFO] Running PandasAI with openai LLM...
+2023-06-22 09:59:04 [INFO] Prompt ID: 7158091d-a3f9-4de9-af20-fc26d3a021de
+2023-06-22 09:59:04 [INFO] Using cached response
+2023-06-22 09:59:04 [INFO] 
+Code running:
+```
+male_df = df[df['Sex'] == 'male']
+num_male = len(male_df)
+print('Number of males:', num_male)
+```
+2023-06-22 09:59:04 [INFO] Answer: Number of males: 577
+2023-06-22 09:59:04 [INFO] Executed in: 0.008000612258911133s
