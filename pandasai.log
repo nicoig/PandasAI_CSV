@@ -583,3 +583,18 @@ top         S
 freq      644
 Name: Embarked, dtype: object
 2023-06-21 23:16:54 [INFO] Executed in: 41.80905556678772s
+2023-06-22 00:40:45 [INFO] Running PandasAI with openai LLM...
+2023-06-22 00:40:45 [INFO] Prompt ID: cbf90084-90b4-4c32-ad0e-a65193089fc2
+2023-06-22 00:40:45 [INFO] Using cached response
+2023-06-22 00:40:45 [INFO] 
+Code running:
+```
+gender_counts = df['Sex'].value_counts()
+print('Number of males:', gender_counts['male'])
+print('Number of females:', gender_counts['female'])
+```
+2023-06-22 00:40:45 [INFO] Answer: Number of males: 577
+Number of females: 314
+2023-06-22 00:40:45 [INFO] Executed in: 0.016999244689941406s
+2023-06-22 00:40:54 [INFO] Running PandasAI with openai LLM...
+2023-06-22 00:40:54 [INFO] Prompt ID: ea727609-0082-4b55-8d3a-85c3643caf0f

@@ -12,6 +12,9 @@ from pandasai import PandasAI
 from pandasai.llm.openai import OpenAI
 import os
 from dotenv import load_dotenv
+import matplotlib
+
+matplotlib.use('TkAgg')
 
 # Cargar variables de entorno desde el archivo .env
 load_dotenv()
@@ -25,7 +28,7 @@ uploaded_file = st.file_uploader("Carga tu archivo", type=['csv'])
 if uploaded_file is not None:
     try:
         df = pd.read_csv(uploaded_file, encoding='utf-8', delimiter=',')
-        st.write(df.head(3))
+        st.write(df.head(8))
 
         # Cargar la clave de API desde la variable de entorno
         api = os.getenv("OPENAI_API_KEY")
@@ -70,3 +73,6 @@ if uploaded_file is not None:
 # git commit -m "Se actualizan las variables de entorno"
 # git push origin master
 
+# En Render
+# agregar en variables de entorno
+# PYTHON_VERSION = 3.9.12
