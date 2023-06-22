@@ -3,4 +3,3 @@ pandas==1.5.3
 pandasai==0.6.2
 python-dotenv==1.0.0
 streamlit==1.23.1
-libtk8.6
