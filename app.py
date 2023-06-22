@@ -66,5 +66,7 @@ if uploaded_file is not None:
 
 
 # Actualizar Repo de Github
-#git push origin master
+# git add .
+# git commit -m "Se actualizan las variables de entorno"
+# git push origin master
 
