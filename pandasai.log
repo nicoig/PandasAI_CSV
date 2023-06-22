@@ -598,3 +598,58 @@ Number of females: 314
 2023-06-22 00:40:45 [INFO] Executed in: 0.016999244689941406s
 2023-06-22 00:40:54 [INFO] Running PandasAI with openai LLM...
 2023-06-22 00:40:54 [INFO] Prompt ID: ea727609-0082-4b55-8d3a-85c3643caf0f
+2023-06-22 00:41:00 [INFO] 
+                        Code generated:
+                        ```
+                        import pandas as pd
+import matplotlib.pyplot as plt
+
+# Load the dataframe
+df = pd.read_csv('data.csv')
+
+# Print the metadata of the dataframe
+print(df.info())
+
+# Create a pie chart for the 'Sex' column
+sex_counts = df['Sex'].value_counts()
+plt.pie(sex_counts, labels=sex_counts.index, autopct='%1.1f%%')
+plt.title('Passenger Sex')
+plt.show()
+                        ```
+                    
+2023-06-22 00:41:00 [INFO] 
+Code running:
+```
+print(df.info())
+sex_counts = df['Sex'].value_counts()
+plt.pie(sex_counts, labels=sex_counts.index, autopct='%1.1f%%')
+plt.title('Passenger Sex')
+plt.show()
+plt.close('all')
+```
+2023-06-22 00:41:25 [INFO] Answer: None
+2023-06-22 00:41:25 [INFO] Executed in: 30.916118144989014s
+2023-06-22 00:54:14 [INFO] Running PandasAI with openai LLM...
+2023-06-22 00:54:14 [INFO] Prompt ID: 5cbbabf4-8278-401f-b0ef-91d6d5f45b8b
+2023-06-22 00:54:17 [INFO] 
+                        Code generated:
+                        ```
+                        # First, filter the dataframe to only include rows where Sex is "female"
+female_df = df[df['Sex'] == 'female']
+
+# Then, count the number of rows in the filtered dataframe
+num_females = len(female_df)
+
+# Print the result
+print("There are", num_females, "women in the dataframe.")
+                        ```
+                    
+2023-06-22 00:54:17 [INFO] 
+Code running:
+```
+female_df = df[df['Sex'] == 'female']
+num_females = len(female_df)
+print('There are', num_females, 'women in the dataframe.')
+```
+2023-06-22 00:54:17 [INFO] Answer: There are 314 women in the dataframe.
+2023-06-22 00:54:17 [INFO] Executed in: 2.8870482444763184s

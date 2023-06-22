@@ -1,10 +1,12 @@
 # PandasAI con Streamlit
 
 # Para crear el requirements.txt ejecutamos 
-# pipreqs --encoding=utf8
+# pipreqs --encoding=utf8 --force
 
 # Instalando librerías
 # pip install pandasai streamlit emoji python-dotenv
+# pip freeze | findstr matplotlib >> requirements.txt
+
 
 import streamlit as st 
 import pandas as pd
@@ -28,7 +30,7 @@ uploaded_file = st.file_uploader("Carga tu archivo", type=['csv'])
 if uploaded_file is not None:
     try:
         df = pd.read_csv(uploaded_file, encoding='utf-8', delimiter=',')
-        st.write(df.head(8))
+        st.write(df.head(4))
 
         # Cargar la clave de API desde la variable de entorno
         api = os.getenv("OPENAI_API_KEY")
