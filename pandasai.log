@@ -1524,3 +1524,27 @@ plt.close('all')
 ```
 2023-06-22 16:57:19 [INFO] Answer: None
 2023-06-22 16:57:19 [INFO] Executed in: 11.101298809051514s
+2023-06-22 19:48:41 [INFO] Running PandasAI with openai LLM...
+2023-06-22 19:48:41 [INFO] Prompt ID: d59f5188-ef7b-4332-9132-5d219bb0958f
+2023-06-22 19:48:41 [INFO] Using cached response
+2023-06-22 19:48:41 [INFO] 
+Code running:
+```
+male_df = df[df['Sex'] == 'male']
+num_male = len(male_df)
+print('Number of males:', num_male)
+```
+2023-06-22 19:48:41 [INFO] Answer: Number of males: 577
+2023-06-22 19:48:41 [INFO] Executed in: 0.040000200271606445s
+2023-06-22 19:48:51 [INFO] Running PandasAI with openai LLM...
+2023-06-22 19:48:51 [INFO] Prompt ID: f7e536ce-b2d0-49de-8565-244365d7988d
+2023-06-22 19:48:51 [INFO] Using cached response
+2023-06-22 19:48:51 [INFO] 
+Code running:
+```
+df.describe()
+df['Survived'].value_counts()
+df['Survived'].sum()
+```
+2023-06-22 19:48:51 [INFO] Answer: 342
+2023-06-22 19:48:51 [INFO] Executed in: 0.05599808692932129s

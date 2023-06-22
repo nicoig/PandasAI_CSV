@@ -18,7 +18,7 @@ import matplotlib
 import matplotlib.pyplot as plt
 import tkinter as tk
 
-matplotlib.use('TkAgg')
+#matplotlib.use('TkAgg')
 
 load_dotenv()
 
