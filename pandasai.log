@@ -428,3 +428,99 @@ plt.close('all')
 ```
 2023-06-21 21:39:37 [INFO] Answer: None
 2023-06-21 21:39:37 [INFO] Executed in: 4.700428247451782s
+2023-06-21 22:42:26 [INFO] Running PandasAI with openai LLM...
+2023-06-21 22:42:26 [INFO] Prompt ID: 5e57058d-397e-4965-884d-717a796dd673
+2023-06-21 22:42:26 [INFO] Using cached response
+2023-06-21 22:42:26 [INFO] 
+Code running:
+```
+male_df = df[df['Sex'] == 'male']
+num_male = len(male_df)
+print('Number of males:', num_male)
+```
+2023-06-21 22:42:26 [INFO] Answer: Number of males: 577
+2023-06-21 22:42:26 [INFO] Executed in: 0.015999317169189453s
+2023-06-21 22:47:59 [INFO] Running PandasAI with openai LLM...
+2023-06-21 22:47:59 [INFO] Prompt ID: 39fed403-78df-4ac6-9574-f9ab7ee47033
+2023-06-21 22:48:00 [INFO] error_code=invalid_api_key error_message='Incorrect API key provided: sk-tfOHE***************************************2420. You can find your API key at https://platform.openai.com/account/api-keys.' error_param=None error_type=invalid_request_error message='OpenAI API error received' stream_error=False
+2023-06-21 22:48:29 [INFO] Running PandasAI with openai LLM...
+2023-06-21 22:48:29 [INFO] Prompt ID: f5435f98-6264-4ac2-8fa1-e5e9d50bee74
+2023-06-21 22:48:30 [INFO] error_code=invalid_api_key error_message='Incorrect API key provided: sk-tfOHE***************************************2420. You can find your API key at https://platform.openai.com/account/api-keys.' error_param=None error_type=invalid_request_error message='OpenAI API error received' stream_error=False
+2023-06-21 22:52:17 [INFO] Running PandasAI with openai LLM...
+2023-06-21 22:52:17 [INFO] Prompt ID: bdd57661-4c42-4fcd-b43a-d238eba51719
+2023-06-21 22:52:17 [INFO] Using cached response
+2023-06-21 22:52:17 [INFO] 
+Code running:
+```
+male_df = df[df['Sex'] == 'male']
+num_male = len(male_df)
+print('Number of males:', num_male)
+```
+2023-06-21 22:52:17 [INFO] Answer: Number of males: 577
+2023-06-21 22:52:17 [INFO] Executed in: 0.0s
+2023-06-21 22:54:16 [INFO] Running PandasAI with openai LLM...
+2023-06-21 22:54:16 [INFO] Prompt ID: b33f6e24-bb31-4041-aec0-993a2b6abb2e
+2023-06-21 22:54:17 [INFO] error_code=invalid_api_key error_message='Incorrect API key provided: sk-tfOHE***************************************2420. You can find your API key at https://platform.openai.com/account/api-keys.' error_param=None error_type=invalid_request_error message='OpenAI API error received' stream_error=False
+2023-06-21 22:54:24 [INFO] Running PandasAI with openai LLM...
+2023-06-21 22:54:24 [INFO] Prompt ID: 244f1d9c-833e-43c0-8450-314ae83e64d2
+2023-06-21 22:54:24 [INFO] Using cached response
+2023-06-21 22:54:24 [INFO] 
+Code running:
+```
+male_df = df[df['Sex'] == 'male']
+num_male = len(male_df)
+print('Number of males:', num_male)
+```
+2023-06-21 22:54:24 [INFO] Answer: Number of males: 577
+2023-06-21 22:54:24 [INFO] Executed in: 0.007999420166015625s
+2023-06-21 22:54:49 [INFO] Running PandasAI with openai LLM...
+2023-06-21 22:54:49 [INFO] Prompt ID: df15ab6d-5ae1-4c6a-a573-5d59f2790839
+2023-06-21 22:54:50 [INFO] error_code=invalid_api_key error_message='Incorrect API key provided: sk-tfOHE***************************************2420. You can find your API key at https://platform.openai.com/account/api-keys.' error_param=None error_type=invalid_request_error message='OpenAI API error received' stream_error=False
+2023-06-21 22:56:15 [INFO] Running PandasAI with openai LLM...
+2023-06-21 22:56:15 [INFO] Prompt ID: 5af68dee-0aaa-48df-a4c5-e9b975f595c5
+2023-06-21 22:56:16 [INFO] error_code=invalid_api_key error_message='Incorrect API key provided: sk-tfOHE***************************************2420. You can find your API key at https://platform.openai.com/account/api-keys.' error_param=None error_type=invalid_request_error message='OpenAI API error received' stream_error=False
+2023-06-21 22:59:50 [INFO] Running PandasAI with openai LLM...
+2023-06-21 22:59:50 [INFO] Prompt ID: 1ecd7a1c-32eb-4a72-8853-6167c490753c
+2023-06-21 22:59:51 [INFO] error_code=invalid_api_key error_message='Incorrect API key provided: sk-tfOHE***************************************2420. You can find your API key at https://platform.openai.com/account/api-keys.' error_param=None error_type=invalid_request_error message='OpenAI API error received' stream_error=False
+2023-06-21 23:04:16 [INFO] Running PandasAI with openai LLM...
+2023-06-21 23:04:16 [INFO] Prompt ID: 5ab9c3cd-39d3-489f-8619-8d5f1e7e1345
+2023-06-21 23:04:17 [INFO] error_code=invalid_api_key error_message='Incorrect API key provided: sk-tfOHE***************************************2420. You can find your API key at https://platform.openai.com/account/api-keys.' error_param=None error_type=invalid_request_error message='OpenAI API error received' stream_error=False
+2023-06-21 23:11:11 [INFO] Running PandasAI with openai LLM...
+2023-06-21 23:11:11 [INFO] Prompt ID: 0cd6edd6-4ccd-49e2-924e-81aa5e7cb0ad
+2023-06-21 23:11:11 [INFO] Using cached response
+2023-06-21 23:11:11 [INFO] 
+Code running:
+```
+male_df = df[df['Sex'] == 'male']
+num_male = len(male_df)
+print('Number of males:', num_male)
+```
+2023-06-21 23:11:11 [INFO] Answer: Number of males: 577
+2023-06-21 23:11:11 [INFO] Executed in: 0.047995567321777344s
+2023-06-21 23:11:20 [INFO] Running PandasAI with openai LLM...
+2023-06-21 23:11:20 [INFO] Prompt ID: bb0412ab-1db9-487d-8a8c-de8cc0195d6f
+2023-06-21 23:11:20 [INFO] error_code=invalid_api_key error_message='Incorrect API key provided: sk-tfOHE***************************************2420. You can find your API key at https://platform.openai.com/account/api-keys.' error_param=None error_type=invalid_request_error message='OpenAI API error received' stream_error=False
+2023-06-21 23:15:47 [INFO] Running PandasAI with openai LLM...
+2023-06-21 23:15:47 [INFO] Prompt ID: 1fccfaed-31a7-4fc1-b458-25d184eeef28
+2023-06-21 23:15:53 [INFO] 
+                        Code generated:
+                        ```
+                        # First, we filter the dataframe to only include rows where the 'Sex' column is 'female'
+female_df = df[df['Sex'] == 'female']
+
+# Then, we count the number of rows in the filtered dataframe
+num_females = len(female_df)
+
+# Finally, we print the result
+print("Number of females:", num_females)
+                        ```
+                    
+2023-06-21 23:15:53 [INFO] 
+Code running:
+```
+female_df = df[df['Sex'] == 'female']
+num_females = len(female_df)
+print('Number of females:', num_females)
+```
+2023-06-21 23:15:53 [INFO] Answer: Number of females: 314
+2023-06-21 23:15:53 [INFO] Executed in: 5.462074041366577s

@@ -12,3 +12,5 @@
 'crea un grafico de torta de la columna sex', (6656, 325)
 'cuantos hombres hay?', (7168, 289)
 'crea un grafico de torta del campo Sex', (7680, 328)
+'cuantas mujeres hay?', (8192, 309)
+'que campos existen en la columna Embarked?', (8704, 983)
