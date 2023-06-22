@@ -16,6 +16,7 @@ import os
 from dotenv import load_dotenv
 import matplotlib
 import matplotlib.pyplot as plt
+import tkinter as tk
 
 matplotlib.use('TkAgg')
 
