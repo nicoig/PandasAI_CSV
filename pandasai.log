@@ -1509,3 +1509,18 @@ plt.close('all')
 ```
 2023-06-22 16:56:20 [INFO] Answer: None
 2023-06-22 16:56:20 [INFO] Executed in: 0.0891408920288086s
+2023-06-22 16:57:08 [INFO] Running PandasAI with openai LLM...
+2023-06-22 16:57:08 [INFO] Prompt ID: 1d7d4eef-26a5-4f72-991a-91bdf5759e65
+2023-06-22 16:57:08 [INFO] Using cached response
+2023-06-22 16:57:08 [INFO] 
+Code running:
+```
+print(df.info())
+sex_counts = df['Sex'].value_counts()
+plt.pie(sex_counts, labels=sex_counts.index, autopct='%1.1f%%')
+plt.title('Passenger Sex')
+plt.show()
+plt.close('all')
+```
+2023-06-22 16:57:19 [INFO] Answer: None
+2023-06-22 16:57:19 [INFO] Executed in: 11.101298809051514s
