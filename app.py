@@ -17,7 +17,7 @@ from dotenv import load_dotenv
 import matplotlib
 import matplotlib.pyplot as plt
 
-#matplotlib.use('TkAgg')
+matplotlib.use('TkAgg')
 
 load_dotenv()
 
