@@ -33,3 +33,8 @@
 'crea un grafico de torta por el campo Survived', (18432, 391)
 'crea un grafico de barras por el campo survived', (18944, 359)
 'crea un grafico de barras por el campo sex', (19456, 382)
+'cuantas personas sobrevivieron?', (19968, 642)
+'crea un grafico de tortas por el campo Sex', (20992, 359)
+'cuantas personas sobrevivieron y cuantas no? que porcentaje?', (21504, 635)
+'crea un grafico de torta por el campo sex', (22528, 359)
+'cuantas mujeres hay?\n', (23040, 278)

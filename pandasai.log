@@ -1591,3 +1591,59 @@ Number of non-survivors: 549
 Percentage of survivors: 38.38383838383838
 Percentage of non-survivors: 61.61616161616161
 2023-06-22 19:49:11 [INFO] Executed in: 7.718010663986206s
+2023-06-22 20:11:45 [INFO] Running PandasAI with openai LLM...
+2023-06-22 20:11:45 [INFO] Prompt ID: aa53b9cb-be50-47d9-8486-f9010d77ae71
+2023-06-22 20:11:49 [INFO] 
+                        Code generated:
+                        ```
+                        import pandas as pd
+import matplotlib.pyplot as plt
+
+# Load the dataframe
+df = pd.read_csv('data.csv')
+
+# Print the metadata of the dataframe
+print(df.info())
+
+# Create a pie chart for the 'Sex' column
+sex_counts = df['Sex'].value_counts()
+plt.pie(sex_counts, labels=sex_counts.index, autopct='%1.1f%%')
+plt.title('Passenger Sex')
+plt.show()
+                        ```
+                    
+2023-06-22 20:11:49 [INFO] 
+Code running:
+```
+print(df.info())
+sex_counts = df['Sex'].value_counts()
+plt.pie(sex_counts, labels=sex_counts.index, autopct='%1.1f%%')
+plt.title('Passenger Sex')
+plt.show()
+plt.close('all')
+```
+2023-06-22 20:13:53 [INFO] Answer: None
+2023-06-22 20:13:53 [INFO] Executed in: 128.57479166984558s
+2023-06-22 20:28:52 [INFO] Running PandasAI with openai LLM...
+2023-06-22 20:28:52 [INFO] Prompt ID: 99b08999-c4be-4102-9ddd-6632224a7cff
+2023-06-22 20:28:56 [INFO] 
+                        Code generated:
+                        ```
+                        # First, we filter the dataframe to only include rows where the 'Sex' column is 'female'
+female_df = df[df['Sex'] == 'female']
+
+# Then, we count the number of rows in the filtered dataframe
+num_females = len(female_df)
+
+print("Number of females:", num_females)
+                        ```
+                    
+2023-06-22 20:28:56 [INFO] 
+Code running:
+```
+female_df = df[df['Sex'] == 'female']
+num_females = len(female_df)
+print('Number of females:', num_females)
+```
+2023-06-22 20:28:56 [INFO] Answer: Number of females: 314
+2023-06-22 20:28:56 [INFO] Executed in: 3.8749840259552s

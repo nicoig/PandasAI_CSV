@@ -16,9 +16,10 @@ import os
 from dotenv import load_dotenv
 import matplotlib
 import matplotlib.pyplot as plt
+import csv
 #import tkinter as tk
 
-matplotlib.use('TkAgg')
+#matplotlib.use('TkAgg')
 
 load_dotenv()
 
@@ -29,12 +30,18 @@ uploaded_file = st.file_uploader("Carga tu archivo", type=['csv', 'xlsx'])
 
 if uploaded_file is not None:
     df = None
-    if uploaded_file.type == "application/vnd.openxmlformats-officedocument.spreadsheetml.sheet":
-        df = pd.read_excel(uploaded_file)
-    elif uploaded_file.type == "text/csv":
-        df = pd.read_csv(uploaded_file, encoding='utf-8', delimiter=',')
-    else:
-        st.error("El tipo de archivo no es compatible. Por favor, carga un archivo CSV o Excel.")
+    if uploaded_file is not None:
+        df = None
+        if uploaded_file.type == "application/vnd.openxmlformats-officedocument.spreadsheetml.sheet":
+            df = pd.read_excel(uploaded_file)
+        elif uploaded_file.type == "text/csv":
+            preview = uploaded_file.read(1024).decode()  # Lee los primeros 1024 bytes del archivo
+            dialect = csv.Sniffer().sniff(preview)
+            uploaded_file.seek(0)  # Regresa al inicio del archivo después de la previsualización
+            df = pd.read_csv(uploaded_file, encoding='utf-8', delimiter=dialect.delimiter)
+        else:
+            st.error("El tipo de archivo no es compatible. Por favor, carga un archivo CSV o Excel.")
+
 
     if df is not None:
         st.write(df.head(4))
